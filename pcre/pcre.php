@@ -212,11 +212,10 @@ function preg_match(string $pattern, string $subject, &$matches, int $flags = 0,
  * So, $out[0] contains array of strings that matched full pattern,
  * and $out[1] contains array of strings enclosed by tags.
  * </p>
- * @return int|false|null the number of full pattern matches (which might be zero),
+ * @return int|false the number of full pattern matches (which might be zero),
  * or <b>FALSE</b> if an error occurred.
  */
-#[LanguageLevelTypeAware(['8.0' => 'int|false'], default: 'int|false|null')]
-function preg_match_all(string $pattern, string $subject, &$matches, int $flags = 0, int $offset = 0) {}
+function preg_match_all(string $pattern, string $subject, &$matches, int $flags = 0, int $offset = 0): int|false {}
 
 /**
  * Perform a regular expression search and replace
